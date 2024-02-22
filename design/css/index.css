@@ -1,0 +1,202 @@
+*{
+padding: 0;
+margin: 0;
+}
+body{
+	background-color: #2F005A;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.signupPopup,.loginPopup{
+	display: flex;
+	flex-direction: column;
+}
+.buttonsDiv button{
+background-color: #00D969;
+	border-radius: 20px;
+	border: none;
+	width: 60%;
+	padding: 10px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -5px;
+	transition: .3s;
+	color: white;
+}
+.buttonsDiv button:hover{
+background-color: #00D969;
+	border-radius: 20px;
+	border: none;
+	width: 60%;
+	padding: 10px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -5px;
+	transition: .3s;
+	color: white;
+}
+
+.container{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+form{
+	box-shadow: 0px 0px 7px #ccc;
+	 width: 35.3vw; 
+	 height: 70%;
+	 padding-left: 3.2198vw;
+	 padding-right: 3.2198vw;
+	 border-radius: 7px;
+	 background-color: white;
+	transition: .3s;
+	animation: cssAnimation .3s forwards;
+}
+@keyframes cssAnimation{
+	0% {opacity: 0;
+		height: 0vh;
+	}
+	50% {opacity: 0;
+		height: 0vh;
+	}
+	100% {opacity: 1;
+		height: inherit;
+		
+	}
+	
+}
+
+form h2{
+	margin-top: -3vh;
+font-size: 1.3rem;
+	background-color: #2F005A;
+	width: 60%;
+	padding: 10px;
+	color: white;
+	margin-left: 20%;
+	border-radius: 25px;
+	box-shadow: 0px 0px 4px #fff;
+}
+
+form .btn{
+	background-color:  #2F005A;
+	border-radius: 20px;
+	border: none;
+	width: 60%;
+	padding: 10px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 10px;
+	transition: .3s;
+
+}
+form #createBtn{
+	background-color:   #00D969;
+	margin-top: 0px;
+
+}
+form .btn:hover{
+	background-color: #430086;
+
+}
+form #createBtn:hover{
+	background-color:#16F381;
+
+}
+
+form .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+form .inputBox span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 7px;
+	transition: .3s;
+	pointer-events: none;
+}
+form .inputBox input:valid ~span,
+form .inputBox input:focus ~span
+{
+	transform: translateX(0px) translateY(-25px);
+	background-color: #2F005A;
+	padding: 4px 15px 4px 15px;
+	border-radius: 15px;
+	color: white;
+	font-size: 13px;
+}
+form .inputBox input
+{
+	border:none;
+	box-shadow: 0px 0px 3px #2F005A;
+}
+
+form .inputBox input:focus
+{
+	border:none;
+	box-shadow: 0px 0px 6px #2F005A;
+}
+.toastContainer{
+float: right;
+	margin-top: -100vh;
+	z-index: 1;
+	position: relative;
+}
+.toastBox{
+	float: right;
+	margin: 2vh;
+	display: flex;
+	flex-direction: column;
+	background-color:white;
+	border-radius: 8px 0px 0px 8px;
+	font-size: 1vw;
+	color: #9263BF;
+	border-right: 1vw solid goldenrod;
+	max-width: 25vw;
+	animation-name: myAnimation;
+    animation-duration: 3500ms;
+    animation-fill-mode: forwards;
+}
+.toastBox .toastbody{
+	padding: 0.5vw;
+	display: flex;
+	flex-direction: row;
+}
+.toastBox i{
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	background-color: green;
+	display: flex;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	border: 0.2vw solid white;
+}
+.toastBox p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2vw;
+	margin: 0px 0.3vw 0px 0.3vw;
+}
+@keyframes myAnimation{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,249 @@
+
+/*.dropdown{
+	position: absolute;
+	z-index: 1;
+	height: 100vh;
+	display: none;
+}*/
+/*.dropdown ul{
+	list-style: none;
+	float: right;
+	margin-right: 5%;
+	margin-top: 4%;
+	font-size: 1vw;
+	padding: 0.5vw;
+	border-radius: 7px;
+	background-color: white;
+	box-shadow: 0px 0px 1.4px #ccc;
+	color: #2F005A;
+}*/
+/*.dropdown ul li{
+	width: 100%;
+	padding-top: 0.6vw;
+	padding-bottom: 0.6vw;
+	padding-left: 0.3vw;
+	padding-right: 0.3vw;
+	border-radius: 6px;
+	transition: .2s;
+}
+.dropdown ul li:hover{
+	background-color: whitesmoke;
+
+}
+.dropdown ul a{
+text-decoration: none;
+color: #2F005A;
+}*/
+*::-webkit-scrollbar{
+  width: 0.6vw;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-track{
+  box-shadow: inset0 0 5px grey;
+  border-radius: 10px;
+  transition: .3s;
+}
+*::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, transparent,lightgrey);
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:hover{
+  background: #ccc;
+  border-radius: 10px;
+}
+.artContainer{
+	width: 100%;height: 100vh;
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+}
+.topbar{
+	width: 100%;
+	padding-right: 10px;
+	padding-top: 10px;
+	align-items: end;
+}
+.topbar .content{
+	width: auto;
+	float: right;
+	display: flex;
+}
+.topbar .searchbar{
+	margin-right: 20%;
+	float: right;
+	padding-right: 5px;
+	background-color: white;
+	border-radius: 15px;
+	min-height: 3vw;
+	width: 20vw;
+	display: flex;
+	box-shadow: 0px 0px 1.4px #ccc;
+}
+.topbar .searchbar input{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding-left: 1vw;
+	font-size: 1.2vw;
+	width: 85%;
+}
+.topbar .searchbar button{
+	background-color: transparent;
+	border: none;
+	color: #2F005A;
+	width: 15%;
+	 transform: scaleX(-1);
+	 font-size: 1.3vw;
+}
+
+.topbar #wrapper{
+	float: right;
+	margin-right: 0.5vw;
+}
+.topbar #wrapper button:hover +.dropdown{
+	display: block;
+}
+.topbar #form{
+	float: right;
+	margin-right: 0.5vw;
+}
+.topbar #form button,#wrapper button{
+	background-color: white;
+	border-radius: 15px;
+	min-height: 3vw;
+	padding: 0.2vw;
+	padding-right: 1vw;
+	display: flex;
+	box-shadow: 0px 0px 1.4px #ccc;
+	align-items: center;
+	font-size: 1vw;
+	border: none;
+
+}
+.topbar #wrapper button i, #form button i{
+	padding: 0.5vw;
+	margin-right: 1.5vw;
+	margin-left: 1vw;
+	border-radius: 50%;
+	width: 2vw;
+	height: 2vw;
+	color: white;
+	text-align: center;
+	background-color: #2F005A;
+}
+.bottom{
+	width: 98%;
+	height: 99%;
+	margin: 1%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 1vw;
+}
+.bottom .header{
+	width: 100%;
+	margin-bottom: 1vw;
+
+}
+.bottom .tablecontainer{
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.bottom table{
+	table-layout: fixed;
+	border-top-left-radius: 2vh;
+	border-top-right-radius: 2vh;
+}
+
+.bottom .tablecontainer table thead{
+	width: 100%;
+	background-color: rgba(26, 10, 58, 0.05);
+	height: 7vh;
+
+}
+.bottom table thead th{
+text-align: center;
+font-size: 1vw;
+}
+.popup{
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(0, 0, 0, 0.4);
+	margin-top: -100vh;
+	z-index: 1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 5%;
+	animation: cssAnimation .5s forwards;
+}
+@keyframes cssAnimation{
+	0% {opacity: 0;
+	}
+	50% {opacity: 0;
+	}
+	100% {opacity: 1;
+		
+	}
+}
+.popup .form_container{
+width: 40%;
+margin-left: 30%;
+max-height: 60%;
+}
+.popup .form_container #closeBtn{
+float: right;
+width: 2.5vw;
+height: 2.5vw;
+border-radius: 50%;
+background-color: black;
+color: white;
+margin-top: -6vh;
+border: 0.3vw solid #ccc;
+}
+.popup .form_container form{
+	margin-top: 0.3vw;
+	padding: 1vw;
+	max-height: 80vh;
+	border-radius: 10px;
+	background-color: white;
+	overflow-y: scroll;
+}
+.popup .form_container form button{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border-radius: 10px;
+	background-color:#2F005A ;
+	color: white;
+	border: none;
+font-size: 1vw;
+padding-top: 2vh;
+padding-bottom: 2vh;
+.popup h2{
+	font-size: 2vw;
+}
+.popup label{
+	font-size: 1vw;
+}
+.popup .form-control{
+	font-size: 1vw;
+	border-radius: 5px;
+	outline: none;
+
+}
+.popup .form-control:focus{
+	border: 1px solid #2F005A;
+	outline: none;
+	box-shadow: none;
+
+}
+.popup button{
+	font-size: 1vw;
+}
+
+
+
+
+

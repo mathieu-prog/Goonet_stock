@@ -1,0 +1,465 @@
+
+*::-webkit-scrollbar{
+  width: 0.6vw;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-track{
+  box-shadow: inset0 0 5px grey;
+  border-radius: 10px;
+  transition: .3s;
+}
+*::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, transparent,lightgrey);
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:hover{
+  background: #ccc;
+  border-radius: 10px;
+}
+.artContainer{
+	width: 100%;height: 100vh;
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+}
+.topbar{
+	width: 100%;
+	padding-right: 10px;
+	padding-top: 10px;
+	align-items: end;
+}
+.topbar .content{
+	width: auto;
+	float: right;
+	display: flex;
+}
+.topbar .searchbar{
+	margin-right: 10%;
+	float: right;
+	padding-right: 5px;
+	background-color: white;
+	border-radius: 15px;
+	min-height: 3vw;
+	width: 20vw;
+	display: flex;
+	box-shadow: 0px 0px 1.4px #ccc;
+}
+.topbar .provenance{
+	margin-left: 20%;
+}
+.topbar .searchbar input{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding-left: 1vw;
+	font-size: 1vw;
+	width: 85%;
+}
+.topbar .searchbar button{
+	background-color: transparent;
+	border: none;
+	color: #2F005A;
+	width: 15%;
+	 transform: scaleX(-1);
+	 font-size: 1.3vw;
+}
+.topbar #wrapper{
+	float: right;
+	margin-right: 0.5vw;
+	display: flex;
+gap: 1vw;
+}
+.topbar #wrapper button:hover +.dropdown{
+	display: block;
+}
+.topbar #form{
+	float: right;
+	margin-right: 0.5vw;
+}
+.topbar #form button,#wrapper button,.provenance button{
+	background-color: white;
+	border-radius: 15px;
+	min-height: 3vw;
+	padding: 0.2vw;
+	padding-right: 1vw;
+	display: flex;
+	box-shadow: 0px 0px 1.4px #ccc;
+	align-items: center;
+	font-size: 1vw;
+	border: none;
+
+}
+.topbar .provenance{
+	display: flex;
+	flex-direction: row;
+	gap: 0.5vw;
+}
+.topbar .provenance label{
+	text-align: center;
+	align-self: center;
+	font-size: 1.1vw;
+	font-weight: bold;
+}
+
+.topbar #wrapper button i, #form button i{
+	padding: 0.5vw;
+	margin-right: 1.5vw;
+	margin-left: 1vw;
+	border-radius: 50%;
+	width: 2vw;
+	height: 2vw;
+	color: white;
+	text-align: center;
+	background-color: #2F005A;
+}
+.provenance button i{
+	padding: 0.5vw;
+	margin-right: 1.5vw;
+	margin-left: 1vw;
+	border-radius: 50%;
+	width: 2vw;
+	height: 2vw;
+	color: white;
+	text-align: center;
+	background-color: #2F005A;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bottom{
+	width: 98%;
+	height: 99%;
+	margin: 1%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 1vw;
+}
+.bottom .header{
+	width: 100%;
+	margin-bottom: 1vw;
+	display: flex;
+	color: #2F005A;
+
+}
+.bottom .header h3{
+font-size: 2vw;
+width: 50%;
+}
+.bottom .header .navigation{
+width: 50%;
+display: flex;
+justify-content: end;
+}
+.bottom .header .directionbuttons{
+	margin-left: 3vw;
+}
+.bottom .header label{
+font-size: 1.1vw;
+margin-right: 1vw;
+
+}
+.bottom .header label i{
+margin-right: 0.5vw;
+
+}
+
+.bottom .header button{
+margin:0 0.5vw 0 0;
+	background-color: whitesmoke;
+	padding: 0.5vw;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 1vw;
+	color: #2F005A;
+	box-shadow: 0px 0px 2px #ccc;
+}
+.bottom .header select{
+	background-color: transparent;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+}
+.bottom .header select-menu{
+    border: none;
+}
+.bottom .tablecontainer{
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.bottom table{
+	table-layout: fixed;
+}
+.bottom .tablecontainer .tableheader{
+	width: 100%;
+	background-color: rgba(26, 10, 58, 0.05);
+	height: 7vh;
+border-radius: 10px;
+display: flex;
+align-items: center;
+}
+.bottom .tablecontainer .tablebody{
+	width: 100%;
+	height: 70vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+.bottom .tablecontainer .tableheader label{
+font-size: 1vw;
+padding: 0.7vw;
+font-weight: bold;
+width: 25%;
+
+}
+
+.bottom table tbody tr{
+font-size: 1vw;
+transition: .2s;
+
+}
+.bottom table tbody tr:hover{
+background-color: rgb(0, 0, 0, 0.01);
+border-radius: 10px;
+font-weight: 500;
+box-shadow: 0px 0px 2px #ccc;
+}
+.bottom table tbody tr td{
+padding: 0.7vw;
+}
+.bottom .entreetable tbody tr td,.bottom .entreetable thead th{
+padding: 0.6vw;
+}
+.bottom .entreetable thead{
+	width: 100%;
+	background-color: rgba(26, 10, 58, 0.05);
+	height: 7vh;
+border-radius: 10px;
+font-size: 1vw;
+padding-right: 1vw;
+padding-left: 1vw;
+
+}
+.bottom .entreetable #card{
+padding: 0.4vw;
+text-align: center;
+font-size: 0.9vw;
+border-radius: 7px;
+font-weight: 500;
+background-color:red;
+color: white;
+min-width: 80%;
+}
+.bottom table tbody tr td button{
+font-size: 1.2vw;
+background-color: transparent;
+border: none;
+width: 20%;
+padding-top: 0.2vw;
+padding-bottom: 0.2vw;
+transition: .3s;
+}
+
+.bottom table tbody tr td .editbutton{
+	width: 20%;
+}
+.bottom table tbody tr td #btEdit{
+color: #2F005A;
+width: 100%;
+}
+.bottom table tbody tr td #btDelete{
+color: red;
+}
+.bottom table tbody tr td button:hover{
+background-color: rgb(0, 0, 0, 0.1);
+border-radius: 5px;
+}
+.bottom .entreetable button:hover {
+background-color: transparent;
+border-radius: 0px;
+}
+.popup{
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(0, 0, 0, 0.4);
+	margin-top: -100vh;
+	z-index: 1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 5%;
+	animation: cssAnimation .5s forwards;
+	display: none;
+}
+@keyframes cssAnimation{
+	0% {opacity: 0;
+	}
+	50% {opacity: 0;
+	}
+	100% {opacity: 1;
+		
+	}
+}
+.popup .form_container{
+width: 40%;
+margin-left: 30%;
+max-height: 60%;
+}
+.popup .form_container #closeBtn{
+float: right;
+width: 2.5vw;
+height: 2.5vw;
+border-radius: 50%;
+background-color: black;
+color: white;
+margin-top: -6vh;
+border: 0.3vw solid #ccc;
+}
+.popup .form_container form{
+	margin-top: 0.3vw;
+	padding: 1vw;
+	max-height: 80vh;
+	border-radius: 10px;
+	background-color: white;
+	overflow-y: scroll;
+}
+.popup .form_container form button{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border-radius: 10px;
+	background-color:#2F005A ;
+	color: white;
+	border: none;
+font-size: 1vw;
+padding-top: 2vh;
+padding-bottom: 2vh;
+}
+.popup h2{
+	font-size: 2vw;
+}
+.popup #lbQte{
+	float: right;
+	padding: 1vw;
+	border-radius: 7px;
+	background-color: darkgreen;
+	color: white;
+	box-shadow: 2px 0px 2px #ccc;
+}
+.popup label{
+	font-size: 1vw;
+}
+.popup .form-control,select{
+	font-size: 1vw;
+	border-radius: 5px;
+	outline: none;
+}
+.form-control:focus,select:focus{
+	border: 1px solid #2F005A;
+	outline: none;
+	box-shadow: none;
+
+}
+.popup button{
+	font-size: 1vw;
+}
+.popup #comboQteSortie{
+	background-color: transparent;
+	border: none;
+	-webkit-appearance:none;
+	margin-top: 0.1vh;
+}
+
+.popup #comboQteSortie:disabled{
+	background-color: transparent;
+	color: white;
+}
+
+.popup #divQteProv{
+width: 70%;
+display: flex;
+margin: 1vw;
+background-color: darkgreen;
+border-radius: 4px;
+color: white;
+float: right;
+padding: 0.5vw 0px 0.5vw 0px;
+}
+.popup span{
+	font-size: 0.87vw;
+	color: red;
+}
+.toastContainer{
+float: right;
+	margin-top: -100vh;
+	z-index: 1;
+	position: relative;
+}
+.toastBox{
+	float: right;
+	margin: 2vh;
+	display: flex;
+	flex-direction: column;
+	background-color:#9263BF;
+	border-radius: 8px 0px 0px 8px;
+	font-size: 1vw;
+	color: white;
+	box-shadow: 2px 0px 3px #ccc;
+	border-right: 1vw solid white;
+	max-width: 25vw;
+	animation-name: myAnimation;
+    animation-duration: 3500ms;
+    animation-fill-mode: forwards;
+}
+.toastBox .toastbody{
+	padding: 0.5vw;
+	display: flex;
+	flex-direction: row;
+}
+.toastBox i{
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	background-color: green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0.2vw solid white;
+}
+.toastBox p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2vw;
+	margin: 0px 0.3vw 0px 0.3vw;
+}
+@keyframes myAnimation{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}
+.form-control:focus,select:focus{
+  border: 1px solid #2F005A;
+  outline: none;
+  box-shadow: none;
+
+}
+
+
+
+
+
+
+
+
